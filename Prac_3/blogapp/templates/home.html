@@ -1,0 +1,7 @@
+<h1>하이</h1>
+<h2><a href = "{%url 'new'%}">글쓰기</a></h2>
+{% for blog in blogs.all %}
+    <h2>{{blog.title}}</h2>
+    <p>{{blog.pub_date}}</p>
+    <p>{{blog.summary}}<a href = "{% url 'detail' blog.id%}">...more</a></p>
+{% endfor %}

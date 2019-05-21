@@ -1,0 +1,18 @@
+<p>Hello World</p>
+
+{% for blog in blogs %}
+    {{blog.title}}
+    <br>
+    {{blog.pub_data}}
+    <br>
+    {{blog.body}}
+    <br>
+    <a href="{% url 'detail' blog.id%}">{{blog.id}}></a>
+{%endfor%}
+<a href="{%url 'newhome'%}" title = '배고파 열기'>배고파</a>
+<form action = "{%url 'newhome'%}">
+    <textarea name = 'fulltext' cols = "30" rows="10"></textarea>
+    <br>
+    <input type="submit" value="Count!"/>
+</form>
+    
